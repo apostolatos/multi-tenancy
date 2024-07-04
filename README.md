@@ -33,9 +33,11 @@ git clone https://github.com/your-username/your-repository.git
 
 ```bash
 cd your-repository
+```
 
 ```bash
 cd cp .env.example .env
+```
 
 ### Step 3: Docker Setup
 
@@ -45,6 +47,7 @@ Run the following command to build the Docker images and start the containers in
 ```bash
 docker-compose build
 docker-compose up -d
+```
 
 ### Step 4: Database Migration
 
@@ -52,6 +55,7 @@ With the Docker containers up and running, it's time to migrate the database. Ru
 
 ```bash
 docker-compose exec app php artisan migrate
+```
 
 ### Step 5: Database Seeding
 
@@ -59,4 +63,5 @@ To populate the database with initial data, run the database seeders with the fo
 
 ```bash
 docker-compose exec app php artisan db:seed
+```
 
