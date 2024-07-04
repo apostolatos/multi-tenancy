@@ -28,3 +28,35 @@ First, you need to clone the project repository to your local machine. Open a te
 
 ```bash
 git clone https://github.com/your-username/your-repository.git
+
+### Step 2: Clone the Repository
+
+```bash
+cd your-repository
+
+```bash
+cd cp .env.example .env
+
+### Step 3: Docker Setup
+
+Now, we will build and start the Docker containers.
+Run the following command to build the Docker images and start the containers in the background:
+
+```bash
+docker-compose build
+docker-compose up -d
+
+### Step 4: Database Migration
+
+With the Docker containers up and running, it's time to migrate the database. Run the following command to execute the migrations:
+
+```bash
+docker-compose exec app php artisan migrate
+
+### Step 5: Database Seeding
+
+To populate the database with initial data, run the database seeders with the following command:
+
+```bash
+docker-compose exec app php artisan db:seed
+
