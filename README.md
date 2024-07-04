@@ -66,9 +66,9 @@ To populate the database with initial data, run the database seeders with the fo
 docker-compose exec app php artisan db:seed
 ```
 
-### Step 6: Create Tenants
+### Step 6: Create demo Tenants
 
-To populate the database with initial data, run the database seeders with the following command:
+To populate tenants, run the following command:
 
 ```bash
 php artisan tenant:create tenant1 tenant1.example.com
