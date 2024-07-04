@@ -9,6 +9,12 @@ class UserPolicy
 {
     use HandlesAuthorization;
 
+    public function view(User $user)
+    {
+        // Only admin users can create other users
+        return $user->hasRole('admin');
+    }
+
     public function create(User $user)
     {
         // Only admin users can create other users

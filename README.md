@@ -66,6 +66,15 @@ To populate the database with initial data, run the database seeders with the fo
 docker-compose exec app php artisan db:seed
 ```
 
+### Step 6: Create Tenants
+
+To populate the database with initial data, run the database seeders with the following command:
+
+```bash
+php artisan tenant:create tenant1 tenant1.example.com
+php artisan tenant:create tenant2 tenant2.example.com
+```
+
 # Multitenancy
 
 Multi-tenancy refers to a software architecture where a single instance of an application serves multiple tenants (customers). Each tenant's data is isolated and securely partitioned, allowing them to operate as if they have their own dedicated instance of the application. 

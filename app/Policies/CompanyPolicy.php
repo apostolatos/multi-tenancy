@@ -11,9 +11,13 @@ class CompanyPolicy
     use HandlesAuthorization;
 
     public function view(User $user)
-    {
-        // Only admin users can view companies
-        return $user->hasRole('admin');
+    {   
+        // Admins can view all companies
+        if ($user->hasRole('admin')) {
+            return true;
+        }
+
+        return false;
     }
 
     public function create(User $user)
@@ -22,13 +26,13 @@ class CompanyPolicy
         return $user->hasRole('admin');
     }
 
-    public function update(User $user, Company $company)
+    public function update(User $user)
     {
         // Only admin users can update companies
         return $user->hasRole('admin');
     }
 
-    public function delete(User $user, Company $company)
+    public function delete(User $user)
     {
         // Only admin users can delete companies
         return $user->hasRole('admin');

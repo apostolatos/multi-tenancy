@@ -32,6 +32,10 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::define('view-companies', [CompanyPolicy::class, 'view']);
+        Gate::define('create-company', [CompanyPolicy::class, 'create']);
+        Gate::define('update-company', [CompanyPolicy::class, 'update']);
+        Gate::define('delete-company', [CompanyPolicy::class, 'delete']);
+        Gate::define('view-users', [UserPolicy::class, 'view']);
         Gate::define('create-users', [UserPolicy::class, 'create']);
         Gate::define('update-project', [ProjectPolicy::class, 'update']);
     }
