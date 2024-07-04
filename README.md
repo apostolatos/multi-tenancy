@@ -27,7 +27,8 @@ Before you begin, ensure you have the following software installed on your local
 First, you need to clone the project repository to your local machine. Open a terminal and run the following command:
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/apostolatos/multi-tenancy.git
+```
 
 ### Step 2: Clone the Repository
 
@@ -36,7 +37,7 @@ cd your-repository
 ```
 
 ```bash
-cd cp .env.example .env
+cp .env.example .env
 ```
 
 ### Step 3: Docker Setup
