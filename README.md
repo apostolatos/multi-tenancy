@@ -66,3 +66,59 @@ To populate the database with initial data, run the database seeders with the fo
 docker-compose exec app php artisan db:seed
 ```
 
+# Multitenancy
+
+Multi-tenancy refers to a software architecture where a single instance of an application serves multiple tenants (customers). Each tenant's data is isolated and securely partitioned, allowing them to operate as if they have their own dedicated instance of the application. 
+
+# Application User Guide
+
+Welcome to our application! This README will guide you through the available routes and their functionalities.
+
+## Routes
+
+### Companies
+
+1. **List of Companies**
+   - **URL:** `/companies`
+   - **Description:** View a list of all companies.
+   - **Route Name:** `companies.index`
+   - **Usage:** Access this route to see all registered companies.
+
+2. **Create a Company**
+   - **URL:** `/companies/create`
+   - **Description:** Create a new company.
+   - **Route Name:** `companies.create`
+   - **Usage:** Use this route to add a new company to the system.
+
+3. **Edit Company Details**
+   - **URL:** `/companies/{company}/edit`
+   - **Description:** Edit details of a specific company.
+   - **Route Name:** `companies.edit`
+   - **Usage:** Access this route to modify details (such as name, address, etc.) of a specific company. Replace `{company}` with the ID or slug of the company you wish to edit.
+
+### Users
+
+4. **List of Users**
+   - **URL:** `/users`
+   - **Description:** View a list of all users.
+   - **Route Name:** `users.index`
+   - **Usage:** Access this route to see all registered users.
+
+5. **Create a User**
+   - **URL:** `/users/create`
+   - **Description:** Create a new user.
+   - **Route Name:** `users.create`
+   - **Usage:** Use this route to add a new user to the system.
+
+### Projects
+
+6. **Edit Project**
+   - **URL:** `/projects/{projectId}/edit`
+   - **Description:** Edit details of a specific project.
+   - **Route Name:** `projects.edit`
+   - **Usage:** Access this route to modify details of a specific project identified by `{projectId}`. Replace `{projectId}` with the actual ID or slug of the project you wish to edit.
+
+## Notes
+
+- Ensure you have the necessary permissions to perform actions such as creating or editing entities (companies, users, projects).
+- Always replace placeholders like `{company}`, `{projectId}` with actual IDs or slugs when navigating to specific resources.
